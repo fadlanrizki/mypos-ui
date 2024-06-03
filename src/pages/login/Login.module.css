@@ -1,0 +1,22 @@
+.loginPage {
+    padding: 56px 63px;
+    border: 1px solid red;
+    
+}
+.logo{
+    width: 187px;
+    height: 65px;
+}
+
+.loginBanner {
+    width: 644px;
+    height: 466px;
+}
+
+.footerText{
+    font-weight: bold;
+    font-size: 16px;
+} 
+.registerText {
+    text-decoration: underline;
+}
