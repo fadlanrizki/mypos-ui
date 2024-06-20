@@ -1,15 +1,27 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Login from "./pages/login/Login";
-import { LOGIN, SIGN_UP } from "./routes/routesConstant";
+import SignIn from "./pages/signin/SignIn";
+import { SIGN_IN, SIGN_UP, TRANSACTION } from "./routes/routesConstant";
 import SignUp from "./pages/signup/SignUp";
+import HomeTransaction from "./pages/transaction/HomeTransaction";
+import ProtectedRoute from "./utils/ProtectedRoute";
+import { useState } from "react";
 
 function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(true);
   return (
     <>
       <Routes>
-        <Route path={LOGIN} element={<Login />} />
+        <Route path={SIGN_IN} element={<SignIn setIsAuthenticated={setIsAuthenticated} />} />
         <Route path={SIGN_UP} element={<SignUp />} />
+        <Route
+          path={TRANSACTION}
+          element={
+            <ProtectedRoute isAuthenticated={isAuthenticated}>
+              <HomeTransaction />
+            </ProtectedRoute>
+          }
+        />
       </Routes>
     </>
   );

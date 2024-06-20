@@ -2,18 +2,23 @@ import React from "react";
 import { Flex, Col, Row } from "antd";
 import logo from "../../assets/images/logo/logo.png";
 import loginBanner from "../../assets/images/illustrators/login.png";
-import styles from "./Login.module.css";
+import styles from "./SignIn.module.css";
 import CustomText from "../../components/common/text/CustomText";
 import CustomInput from "../../components/common/input/CustomInput";
 import CustomButton from "../../components/common/button/CustomButton";
 import { useNavigate } from "react-router-dom";
-import { SIGN_UP } from "../../routes/routesConstant";
+import { SIGN_UP, TRANSACTION } from "../../routes/routesConstant";
 
-const Login = () => {
+const SignIn = ({ setIsAuthenticated }) => {
   const navigate = useNavigate();
 
-  const testNavigate = () => {
-    navigate(SIGN_UP);
+  const handleNavigate = (route) => {
+    navigate(route);
+  };
+
+  const doLogin = async() => {
+    setIsAuthenticated(true);
+    navigate(TRANSACTION);
   }
 
   return (
@@ -50,13 +55,21 @@ const Login = () => {
                 <CustomInput placeholder={"password"} />
               </Col>
             </Row>
-            <Row>
+            <Row style={{ marginBottom: "2vh" }}>
               <Col span={24}>
-                <CustomButton value={"Submit"} onClick={testNavigate}/>
+                <CustomButton
+                  value={"Submit"}
+                  onClick={() => doLogin()}
+                />
               </Col>
             </Row>
             <Row>
-            <p className={styles.registerText}>Don’t Have an Account ? Sign Up Here.</p>
+              <CustomText
+                style={{ textDecoration: "underline", cursor: "pointer" }}
+                onClick={() => handleNavigate(SIGN_UP)}
+              >
+                Don't Have an Account ? Sign Up Here.
+              </CustomText>
             </Row>
           </Col>
         </Row>
@@ -72,4 +85,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default SignIn;

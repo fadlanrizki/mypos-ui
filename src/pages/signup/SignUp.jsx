@@ -8,7 +8,7 @@ import { COLOR_PRIMARY } from "../../constants/propertiesConstant";
 import CustomInput from "../../components/common/input/CustomInput";
 import CustomButton from "../../components/common/button/CustomButton";
 import { useNavigate } from "react-router-dom";
-import { LOGIN } from "../../routes/routesConstant";
+import { SIGN_IN } from "../../routes/routesConstant";
 
 const Container = styled.div`
   height: 100vh;
@@ -30,7 +30,7 @@ const SignUp = () => {
   const navigate = useNavigate();
 
   const redirectToLogin = () => {
-    navigate(LOGIN);
+    navigate(SIGN_IN);
   };
 
   return (
