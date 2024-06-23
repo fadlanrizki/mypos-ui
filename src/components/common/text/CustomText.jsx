@@ -4,8 +4,8 @@ import { COLOR_PRIMARY } from "../../../constants/propertiesConstant";
 
 
 const StyledText = styled.span`
-  font-size: ${(props) => props.size || '16px'};
-  font-weight: ${(props) => props.weight || 'normal'};
+  font-size: ${(props) => `${props.size}px` || '16px'};
+  font-weight: ${(props) => props.weight || 'inherit'};
   color: ${(props) => props.color || COLOR_PRIMARY};
 `;
 

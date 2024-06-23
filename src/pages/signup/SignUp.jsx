@@ -55,7 +55,7 @@ const SignUp = () => {
             </Row>
             <Row>
               <Col span={24} style={{ padding: "5vh 10vh" }}>
-                <CustomText size={"16px"} weight={"bold"} color={"#fff"}>
+                <CustomText size={"16"} weight={"bold"} color={"#fff"}>
                   © myPOS 2024 - Built by Fadlan
                 </CustomText>
               </Col>
@@ -75,7 +75,7 @@ const SignUp = () => {
               <Col span={14}>
                 <Row justify={"center"} style={{ marginBottom: "5vh" }}>
                   <Col>
-                    <CustomText size={"32px"} weight={"bold"}>
+                    <CustomText size={"32"} weight={"bold"}>
                       Sign Up
                     </CustomText>
                   </Col>

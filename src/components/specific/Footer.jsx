@@ -6,13 +6,11 @@ import CustomText from "../common/text/CustomText";
 import moment from "moment";
 
 const FooterContainer = styled.div`
-    width: 100%;
-    padding: 2vh 5vh;
-    background-color: ${COLOR_PRIMARY};
-    position: absolute;
-    bottom: 0;
-    box-sizing: border-box;
-  `;
+  width: 100%;
+  padding: 2vh 5vh;
+  background-color: ${COLOR_PRIMARY};
+  box-sizing: border-box;
+`;
 
 const Footer = () => {
   const [currentTime, setCurrentTime] = useState(moment());
@@ -29,22 +27,22 @@ const Footer = () => {
     <FooterContainer>
       <Row justify={"space-between"}>
         <Col>
-          <CustomText size={"20px"} weight={"bold"} color={COLOR_WHITE}>
+          <CustomText size={"20"} weight={"bold"} color={COLOR_WHITE}>
             Kasir 1
           </CustomText>
         </Col>
         <Col>
-          <CustomText size={"20px"} weight={"bold"} color={COLOR_WHITE}>
+          <CustomText size={"20"} weight={"bold"} color={COLOR_WHITE}>
             Budi Agung Putra
           </CustomText>
         </Col>
         <Col>
-          <CustomText size={"20px"} weight={"bold"} color={COLOR_WHITE}>
+          <CustomText size={"20"} weight={"bold"} color={COLOR_WHITE}>
             {currentTime.format("dddd / DD-MM-YYYY")}
           </CustomText>
         </Col>
         <Col>
-          <CustomText size={"20px"} weight={"bold"} color={COLOR_WHITE}>
+          <CustomText size={"20"} weight={"bold"} color={COLOR_WHITE}>
             {currentTime.format("HH:mm")}
           </CustomText>
         </Col>

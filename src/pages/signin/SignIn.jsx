@@ -40,7 +40,7 @@ const SignIn = ({ setIsAuthenticated }) => {
           <Col span={5}>
             <Row justify={"center"} style={{ marginBottom: "7vh" }}>
               <Col>
-                <CustomText size={"32px"} weight={"bold"}>
+                <CustomText size={"32"} weight={"bold"}>
                   Sign In
                 </CustomText>
               </Col>
