@@ -7,7 +7,7 @@ import CustomText from "../../components/common/text/CustomText";
 import CustomInput from "../../components/common/input/CustomInput";
 import CustomButton from "../../components/common/button/CustomButton";
 import { useNavigate } from "react-router-dom";
-import { SIGN_UP, TRANSACTION } from "../../routes/routesConstant";
+import { DASHBOARD, SIGN_UP, TRANSACTION } from "../../routes/routesConstant";
 
 const SignIn = ({ setIsAuthenticated }) => {
   const navigate = useNavigate();
@@ -18,7 +18,8 @@ const SignIn = ({ setIsAuthenticated }) => {
 
   const doLogin = async() => {
     setIsAuthenticated(true);
-    navigate(TRANSACTION);
+    // navigate(TRANSACTION);
+    navigate(DASHBOARD);
   }
 
   return (
